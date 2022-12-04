@@ -86,4 +86,31 @@ for each in listOfElves: #finds the max and logs the index of it
         indexOfMax = x
     x += 1
 
-print(listOfElves[indexOfMax])
+yummiestElf0 = listOfElves[indexOfMax] #removes the highest value and saves it
+listOfElves[indexOfMax] = 0
+
+indexOfMax = 0
+max = 0
+x = 0
+for each in listOfElves: #finds the max and logs the index of it again
+    if listOfElves[x] >= max:
+        max = listOfElves[x]
+        indexOfMax = x
+    x += 1
+
+yummiestElf1 = listOfElves[indexOfMax] #removes the highest value and saves it
+listOfElves[indexOfMax] = 0
+
+indexOfMax = 0
+max = 0
+x = 0
+for each in listOfElves: #finds the max and logs the index of it once again
+    if listOfElves[x] >= max:
+        max = listOfElves[x]
+        indexOfMax = x
+    x += 1
+
+yummiestElf2 = listOfElves[indexOfMax] #removes the highest value and saves it
+listOfElves[indexOfMax] = 0
+
+print(yummiestElf0 + yummiestElf1 + yummiestElf2)
