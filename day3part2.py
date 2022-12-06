@@ -51,13 +51,13 @@ prioritySum = 0
 elfCommonBadges = []
 
 
-for x in range(0,len(truck),3):    
+for x in range(0,len(truck),3):    #creates triplets and saves the priority to a list
     elfGroup  = set(truck[x])
     elfGroup1 = set(truck[x + 1])
     elfGroup2 = set(truck[x + 2])
     elfCommonBadges.append(str(elfGroup & elfGroup1 & elfGroup2)[2])
 
-for each in elfCommonBadges:
+for each in elfCommonBadges:    #takes priority and adds the next value
     prioritySum += priorities[each]
 
 print(prioritySum)
