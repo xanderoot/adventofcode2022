@@ -37,7 +37,8 @@ listOfElves = []
 #will be two dimensional, [[1,1000,2000],[2,1000,2000]]
 
 #this file open is copied from another project.
-x = open("day1input.txt", 'rt') #read in text mode
+x = open("Python/adventofcode2022/day1input.txt", 'rt') #read in text mode
+#x = open("day1input.txt", 'rt') #read in text mode
 input = x.readlines(0)  #'3402\n', '2044\n', '3407\n', '2833\n', '1007\n', '4695\n', '\n', '4894\n', '9624\n'
 x.close()
 
