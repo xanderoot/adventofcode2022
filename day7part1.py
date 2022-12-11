@@ -98,22 +98,28 @@ for inner_list in splitCommands: # generated using chat.openai.com
     for i, string in enumerate(inner_list):
         inner_list[i] = string.strip()
     
-for each in splitCommands:
+for each in splitCommands: # generates and increments the list of directories
     if each[0] == 'cd':
         if each[1] == '/': currentLocation = ['/']
         elif each[1] == '..': currentLocation.pop(-1)
         else: currentLocation.append(each[1])
-    if each[0] == 'dir':
-        directoryList[each[1]] = 0
+    if each[0] == 'dir': # creates new directories with a unique string based on the current directory.
+        uniqueString = ''
+        for dir in currentLocation:
+            uniqueString += dir
+        uniqueString += each[1]
+        directoryList[uniqueString] = 0
     if each[0].isdigit():
-        for location in currentLocation:
-            directoryList[location] += int(each[0])
+        uniqueString = ''
+        for dir in currentLocation:
+            uniqueString += dir
+        directoryList[uniqueString] += int(each[0])
     
 sum = 0
 print(directoryList)
 
 for value in directoryList.values():
-    if value <= 100000:
+    if value < 100000:
         sum += value
         
 print(sum)
