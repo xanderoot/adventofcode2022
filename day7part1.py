@@ -80,7 +80,7 @@ To begin, find all of the directories with a total size of at most 100000, then 
 Find all of the directories with a total size of at most 100000. What is the sum of the total sizes of those directories?
 '''
 
-with open('Python/adventofcode2022/day7part1input.txt','r') as f:
+with open('day7part1input.txt','r') as f:
     commands = f.readlines()
 
 directoryList = {'/': 0}
